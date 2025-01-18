@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-primary {
+    background-color: #ddd; 
+}
+
+/*
+//#cfd2d8
+//#dbdde1
+*/
+.bg-secondary{
+    background-color: #acabb4;
+}
+
+.bg-gradient {
+    background: linear-gradient(#cfd2d8, #acabb4);
+}
