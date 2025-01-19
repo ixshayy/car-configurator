@@ -15,5 +15,10 @@
 }
 
 .bg-gradient {
-    background: linear-gradient(#cfd2d8, #acabb4);
+    background: linear-gradient(to right,#d2d4d8, #96a8b6);
+    /* background: #d2d2d2; */
+}
+
+.text-primary {
+    color: #303030;
 }
