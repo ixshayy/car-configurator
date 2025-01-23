@@ -5,6 +5,7 @@ const Canvas = lazy(() => import("./Canvas"));
   
 
 import { SpeedIcon, WeightIcon, RangeIcon, AccelerationIcon } from "./icons";
+import { useNavigate } from "react-router-dom";
 
 interface FeatureData {
   Icon: FC<{ color?: string; size?: number }>;
@@ -45,7 +46,7 @@ type FeatureProps = Pick<FeatureData, "color" | "detail" | "feature" | "Icon">;
 const Feature: FC<FeatureProps> = ({detail, feature, Icon , color}) => {
   return (
     <>
-      <div className="flex flex-col items-center gap-2 p-3 bg-slate-100/80 backdrop-blur-md rounded-md">
+      <div className="flex flex-col items-center gap-2 p-3 bg-slate-100/60 backdrop-blur-md rounded-md">
         <div className="p-2 rounded-full bg-gradient-to-r from-slate-100 to-slate-300">
           <Icon color={color} size={32} />
         </div>
@@ -67,6 +68,9 @@ const FeaturesList : FC = () => {
 }
 
 const Intro  : FC = () => {
+
+  const navigate = useNavigate();
+
   return(  <div className="flex flex-col absolute top-1/2 left-8 -translate-y-1/2 max-w-[350px] gap-5">
     <div className="uppercase flex flex-col text-5xl gap-2">
   <span className="text-xs font-semibold uppercase bg-slate-950  text-slate-100 p-2 py-1 rounded-full w-fit">Electric</span>
@@ -80,7 +84,7 @@ const Intro  : FC = () => {
       <span>From*</span>
       <span className="font-bold">$30,3000</span>
     </div>
-    <div className="flex justify-center items-center gap-1 rounded-full bg-slate-800 w-fit py-3 px-4 text-white">
+    <div className="flex justify-center items-center gap-1 rounded-full bg-slate-900 w-fit py-3 px-4 text-white cursor-pointer hover:bg-slate-800">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -97,7 +101,7 @@ const Intro  : FC = () => {
       </svg>
       <span className="text-white uppercase text-xs" style={{
         lineHeight : "normal"
-      }}>Build your mini</span>
+      }} onClick={() => navigate("/build")}>Build your mini</span>
     </div>
   </div>
 )
@@ -107,9 +111,9 @@ const Home: FC = () => {
   return (
     <div className="h-screen w-full bg-gradient">
       <Intro/>
-      <Suspense fallback={<></>}>
+      {/* <Suspense fallback={<></>}>
         <Canvas />
-      </Suspense>
+      </Suspense> */}
       <div className="grid grid-cols-2 max-w-[350px] absolute top-1/2 -translate-y-1/2 right-8 gap-4">
       <FeaturesList/>
       </div>

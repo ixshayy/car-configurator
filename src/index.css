@@ -22,3 +22,8 @@
 .text-primary {
     color: #303030;
 }
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right,#d2d4d8, #96a8b6);
+}
