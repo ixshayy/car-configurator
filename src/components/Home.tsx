@@ -17,25 +17,25 @@ interface FeatureData {
 const Features: FeatureData[] = [
   {
     Icon: SpeedIcon,
-    color: "#2f4cd0",
+    color: "#1E293B",
     feature: "Top Speed",
     detail: "200mph",
   },
   {
     Icon: WeightIcon,
-    color: "#8544b2",
+    color: "#1E293B",
     feature: "Weight",
     detail: "4551 lbs",
   },
   {
     Icon: RangeIcon,
-    color: "#7dc35f",
+    color: "#1E293B",
     feature: "Range (EPA est.)",
     detail: "396mi",
   },
   {
     Icon: AccelerationIcon,
-    color: "#d4a04b",
+    color: "#1E293B",
     feature: "0-60 mph",
     detail: "1.99s",
   },
